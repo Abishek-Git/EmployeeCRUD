@@ -1,0 +1,27 @@
+<p>employeenames works!</p>
+
+<div class="container">
+  <div class="row">
+  <div class="col-sm-4"></div>
+<div class="col-sm-4 center card bg-info">
+    <table class="table align-content-between">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employees">
+            <td>{{emp.eid}}</td>
+            <td>{{emp.ename}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+  </div>

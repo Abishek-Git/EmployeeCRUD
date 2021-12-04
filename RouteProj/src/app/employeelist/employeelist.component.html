@@ -1,0 +1,36 @@
+<p>employeelist works!</p>
+
+<div class="container card bg-info">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">File</th>
+        <th scope="col">Pic</th>
+
+
+        <th colspan="2" scope="col" class="align-content-xl-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.eid}}</td>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.filename}}</td>
+        <td ><img style="height: 100px; width: 100px;" src="{{emp.epicture}}" id="photo-id"/></td>
+        <td><button routerLink='/editemployee/{{emp.eid}}' routerLinkActive="router-link-active"  class="btn btn-secondary">Edit Detail</button>&nbsp;&nbsp;&nbsp;
+          <button (click)="delete(emp)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <img style="height: 100px; width: 100px;" src="{{image}}" class="img-fluid rounded" alt="Responsive image">
+</div>
+
+
+<router-outlet></router-outlet>

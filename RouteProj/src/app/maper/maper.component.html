@@ -1,0 +1,8 @@
+<p>maper works!</p><div>
+
+<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="addMarker($event.coords.lat, $event.coords.lng)">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<br>
+<button (click)="getCurrentLocation()" class="btn btn-outline-primary">Current Location</button>
+
